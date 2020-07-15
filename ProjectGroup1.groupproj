@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{922BC998-9A28-40BF-8B0F-5AA95CFA4A91}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Reflective.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="C:\Users\Ranger\Documents\Visual Studio 2015\Source\Repos\ALPC-Port\Delphi_ALPC\Dll\GWAPI.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="Reflective">
+			<MSBuild Projects="Reflective.dproj"/>
+		</Target>
+		<Target Name="Reflective:Clean">
+			<MSBuild Targets="Clean" Projects="Reflective.dproj"/>
+		</Target>
+		<Target Name="Reflective:Make">
+			<MSBuild Targets="Make" Projects="Reflective.dproj"/>
+		</Target>
+		<Target Name="GWAPI">
+			<MSBuild Projects="C:\Users\Ranger\Documents\Visual Studio 2015\Source\Repos\ALPC-Port\Delphi_ALPC\Dll\GWAPI.dproj"/>
+		</Target>
+		<Target Name="GWAPI:Clean">
+			<MSBuild Targets="Clean" Projects="C:\Users\Ranger\Documents\Visual Studio 2015\Source\Repos\ALPC-Port\Delphi_ALPC\Dll\GWAPI.dproj"/>
+		</Target>
+		<Target Name="GWAPI:Make">
+			<MSBuild Targets="Make" Projects="C:\Users\Ranger\Documents\Visual Studio 2015\Source\Repos\ALPC-Port\Delphi_ALPC\Dll\GWAPI.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="Reflective;GWAPI"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="Reflective:Clean;GWAPI:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="Reflective:Make;GWAPI:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
