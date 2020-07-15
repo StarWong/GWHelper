@@ -1,0 +1,36 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{B8F5DF4F-76BE-4566-AA2D-36772B75D5E3}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Reflective.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="Reflective">
+			<MSBuild Projects="Reflective.dproj"/>
+		</Target>
+		<Target Name="Reflective:Clean">
+			<MSBuild Targets="Clean" Projects="Reflective.dproj"/>
+		</Target>
+		<Target Name="Reflective:Make">
+			<MSBuild Targets="Make" Projects="Reflective.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="Reflective"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="Reflective:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="Reflective:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
