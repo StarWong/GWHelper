@@ -16,8 +16,10 @@ type
     Memo1: TMemo;
     Label1: TLabel;
     Label2: TLabel;
+    Button3: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,7 +31,7 @@ var
 
 implementation
 uses
-Inject,NTLib;
+Inject,NTLib,FunctionList;
 {$R *.dfm}
 
 procedure TForm1.Button1Click(Sender: TObject);
@@ -55,34 +57,14 @@ begin
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
-var
-s:RawByteString;
 begin
-if Edit1.Text = '' then  ShowMessage('内容不能为空')
-else
-begin
-    s:='你好';
-     MsgLen^:=Length(s);
-     MoveMemory(MsgBin,@s[1],MsgLen^);
-     if SendMsgToServer = 0 then
-     begin
-      Memo1.Lines.Add('发送消息成功');
-      if  ReceiveMsgFromServer = 0 then
-      begin
-           Memo1.Lines.Add('收到消息:' + PAnsiChar(MsgBin) + ',消息长度:' + IntToStr(strlen(PWideChar(MsgBin))));
-      end
-      else
-      begin
-          Memo1.Lines.Add('接受消息发送错误');
-      end;
-     end
-     else
-     begin
-          Memo1.Lines.Add('发送消息发送错误');
-     end;
-
+ShowMessage(IntToStr(addnum(1,3)));
 end;
 
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+ClientRoutine;
 end;
 
 end.

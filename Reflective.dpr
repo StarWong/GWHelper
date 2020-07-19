@@ -1,11 +1,7 @@
 program Reflective;
 
 uses
-  madExcept,
-  madLinkDisAsm,
-  madListHardware,
-  madListProcesses,
-  madListModules,
+  FastMM4,
   Forms,
   Main in 'Main.pas' {Form1},
   LoadLibraryR in 'LoadLibraryR.pas',
@@ -16,7 +12,8 @@ uses
   NTLib in 'NTLib.pas',
   MemoryModule in 'MemoryModule.pas',
   MemoryModuleHook in 'MemoryModuleHook.pas',
-  FuncHook in 'FuncHook.pas';
+  FuncHook in 'FuncHook.pas',
+  FunctionList in 'FunctionList.pas';
 
 {$R *.res}
 

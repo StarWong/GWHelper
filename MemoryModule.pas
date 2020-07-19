@@ -184,7 +184,12 @@ type
     Characteristics: DWORD;
     Last: Boolean;
   end;
-
+  TSectionFreeMethod = record
+  Addr:Pointer;
+  Size:DWORD;
+  end;
+var
+SectionLists:array of TSectionFreeMethod;
 // Explicitly export these functions to allow hooking of their origins
 function GetProcAddress_Internal(hModule: HMODULE; lpProcName: LPCSTR): FARPROC; stdcall; external kernel32 name 'GetProcAddress';
 function LoadLibraryA_Internal(lpLibFileName: LPCSTR): HMODULE; stdcall; external kernel32 name 'LoadLibraryA';
@@ -272,6 +277,7 @@ var
 begin
   CodeBase := Module.CodeBase;
   Section := PIMAGE_SECTION_HEADER(IMAGE_FIRST_SECTION(Module.Headers{$IFNDEF FPC}^{$ENDIF}));
+  SetLength(SectionLists,Module.Headers.FileHeader.NumberOfSections);
   for i := 0 to Module.Headers.FileHeader.NumberOfSections - 1 do
   begin
     // Section doesn't contain data in the dll itself, but may define
@@ -305,7 +311,8 @@ begin
                          PAGE_READWRITE);
     if dest = nil then
       Exit(False);
-
+    SectionLists[i].Addr:=dest;
+    SectionLists[i].Size:=Section.SizeOfRawData;
     // Always use position from file to support alignments smaller
     // than page Size.
     dest := PByte(CodeBase) + Section.VirtualAddress;
@@ -862,6 +869,10 @@ begin
     VirtualFree(mmodule.CodeBase, 0, MEM_RELEASE);
 
   HeapFree(GetProcessHeap(), 0, mmodule);
+  for I := Low(SectionLists) to High(SectionLists) do
+    begin
+        VirtualFree(SectionLists[i].Addr,SectionLists[i].Size,MEM_RELEASE);
+    end;
 end;
 
 end.

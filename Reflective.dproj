@@ -3,7 +3,7 @@
 			<ProjectGuid>{11E0AAA1-C9F9-497E-8A54-3E8A1AB7C244}</ProjectGuid>
 			<ProjectVersion>12.0</ProjectVersion>
 			<MainSource>Reflective.dpr</MainSource>
-			<Config Condition="'$(Config)'==''">Release</Config>
+			<Config Condition="'$(Config)'==''">Debug</Config>
 			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
@@ -59,6 +59,7 @@
 			<DCCReference Include="MemoryModule.pas"/>
 			<DCCReference Include="MemoryModuleHook.pas"/>
 			<DCCReference Include="FuncHook.pas"/>
+			<DCCReference Include="FunctionList.pas"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>
