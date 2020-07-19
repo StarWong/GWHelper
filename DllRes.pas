@@ -1,19 +1,22 @@
 unit DllRes;
 
 interface
-uses Classes;
+uses Classes,SysUtils;
 var
-Res:TResourceStream;
+ServerRes:TResourceStream;
+ClientRes:TResourceStream;
 
 function GetResStream:Boolean;
 procedure FreeResStream;
 implementation
 {$R DllServer.RES}
+{$R DllClient.RES}
 function GetResStream:Boolean;
 begin
  Result:=True;
   try
-    Res:=TResourceStream.Create(HInstance,'DllBin','DllData');
+    ServerRes:=TResourceStream.Create(HInstance,'ServerData','DllBin');
+    ClientRes:=TResourceStream.Create(HInstance,'ClientData','DllBin');
   except
   Result:=False;
   end;
@@ -21,11 +24,21 @@ end;
 
 procedure FreeResStream;
 begin
-  if Assigned(Res) then
+  if Assigned(ServerRes) then
   begin
-    Res.Free;
-    Res:=nil;
+    ServerRes.Free;
+    ServerRes:=nil;
+  end;
+    if Assigned(ClientRes) then
+  begin
+    ClientRes.Free;
+    ClientRes:=nil;
   end;
 end;
+
+initialization
+if not GetResStream then raise Exception.Create('Get ResourceStream Failed!');
+finalization
+FreeResStream;
 
 end.

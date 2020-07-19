@@ -775,31 +775,32 @@ begin
            LPC_LOST_REPLY,
            LPC_CLIENT_DIED:
            begin
-               SaveLog('Delete Client,HANDLE:' + IntToStr(
+               {SaveLog('Delete Client,HANDLE:' + IntToStr(
                Cardinal(m_ClientList[PALPC_CUSTOM_MESSAGE(Addr(MsgCache[0])).Header.MessageId])
                ));
+               }
                m_ClientList.Remove(PALPC_CUSTOM_MESSAGE(Addr(MsgCache[0])).Header.MessageId);
 
            end;
            LPC_REQUEST:
            begin
-              SaveLog(
+              {SaveLog(
               'Rec Msg:' + PWideChar(MsgBin) + ',MsgID:' +
                IntToStr(PALPC_CUSTOM_MESSAGE(Addr(MsgCache[0])).Header.MessageId)
               );
-
+               }
               s:='Hello,response from server';
-              SaveLog('Msg Context:' + s);
+              //SaveLog('Msg Context:' + s);
               MoveMemory(MsgBin,@s[1],Length(s));
               MsgLen^:=Length(s);
               Result:=SendMsgToClient(PALPC_CUSTOM_MESSAGE(Addr(MsgCache[0])).Header.MessageId);
               if Result = 0 then
               begin
-                SaveLog('Send Msg To Client!,True');
+               // SaveLog('Send Msg To Client!,True');
               end
               else
               begin
-                SaveLog('Send Msg To Client,False,errcode:' + IntToHex(Result,8));
+                //SaveLog('Send Msg To Client,False,errcode:' + IntToHex(Result,8));
                 Exit;
                end;
            end;
@@ -808,14 +809,14 @@ begin
               Result:=ServerAcceptClient;
               if Result <> 0 then
               begin
-                SaveLog('Accept Client, Occur a error,errcode:' + IntToHex(Result,8));
+                //SaveLog('Accept Client, Occur a error,errcode:' + IntToHex(Result,8));
                 Exit;
               end;
 
            end
            else
            begin
-               SaveLog('Rec a message ,code:' + IntToHex(Result,8));
+               //SaveLog('Rec a message ,code:' + IntToHex(Result,8));
            end;
 
            end;

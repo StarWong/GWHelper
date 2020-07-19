@@ -75,10 +75,8 @@ begin
 	dwCompiledArch := 1;
 {$ENDIF}
 	uiBaseAddress := Cardinal(lpReflectiveDllBuffer);
- SaveLog('uiBaseAddress',uiBaseAddress,uiBaseAddress);
 	// get the File Offset of the modules NT Header
 	uiExportDir := uiBaseAddress + (PImageDosHeader(uiBaseAddress)._lfanew);
-  SaveLog('uiExportDir',uiExportDir,uiBaseAddress);
 	// currenlty we can only process a PE file which is the same type as the one this fuction has
 	// been compiled as, due to various offset in the PE structures being defined at compile time.
 	if( PImageNtHeaders(uiExportDir).OptionalHeader.Magic = $010B ) then // PE32
@@ -96,25 +94,25 @@ begin
 	//uiNameArray = (UINT_PTR)&((PIMAGE_NT_HEADERS)uiExportDir)->OptionalHeader.DataDirectory[ IMAGE_DIRECTORY_ENTRY_EXPORT ];
 
  uiNameArray:=Cardinal(@(PImageNtHeaders(uiExportDir).OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_EXPORT]));
-  SaveLog('uiNameArray',uiNameArray,uiBaseAddress);
+  //SaveLog('uiNameArray',uiNameArray,uiBaseAddress);
 	// get the File Offset of the export directory
  //	uiExportDir = uiBaseAddress + Rva2Offset( ((PIMAGE_DATA_DIRECTORY)uiNameArray)->VirtualAddress, uiBaseAddress );
   uiExportDir:= uiBaseAddress + Rva2Offset(PImageDataDirectory(uiNameArray).VirtualAddress,uiBaseAddress);
-  SaveLog('uiExportDir',uiExportDir,uiBaseAddress);
+  //SaveLog('uiExportDir',uiExportDir,uiBaseAddress);
 	// get the File Offset for the array of name pointers
  //	uiNameArray = uiBaseAddress + Rva2Offset( ((PIMAGE_EXPORT_DIRECTORY )uiExportDir)->AddressOfNames, uiBaseAddress );
   uiNameArray:= uiBaseAddress + Rva2Offset(Cardinal((PImageExportDirectory(uiExportDir).AddressOfNames)),uiBaseAddress);
 
-  SaveLog('uiNameArray',uiNameArray,uiBaseAddress);
+  //SaveLog('uiNameArray',uiNameArray,uiBaseAddress);
 	// get the File Offset for the array of addresses
 	//uiAddressArray = uiBaseAddress + Rva2Offset( ((PIMAGE_EXPORT_DIRECTORY )uiExportDir)->AddressOfFunctions, uiBaseAddress );
    uiAddressArray := uiBaseAddress + Rva2Offset(Cardinal(PImageExportDirectory(uiExportDir).AddressOfFunctions),uiBaseAddress);
 
-   SaveLog('uiAddressArray',uiAddressArray,uiBaseAddress);
+   //SaveLog('uiAddressArray',uiAddressArray,uiBaseAddress);
 	// get the File Offset for the array of name ordinals
 	//uiNameOrdinals = uiBaseAddress + Rva2Offset( ((PIMAGE_EXPORT_DIRECTORY )uiExportDir)->AddressOfNameOrdinals, uiBaseAddress );
     uiNameOrdinals := uiBaseAddress + Rva2Offset(Cardinal((PImageExportDirectory(uiExportDir).AddressOfNameOrdinals)),uiBaseAddress );
-   SaveLog('uiNameOrdinals',uiNameOrdinals,uiBaseAddress);
+   //SaveLog('uiNameOrdinals',uiNameOrdinals,uiBaseAddress);
 	// get a counter for the number of exported functions...
  //	dwCounter = ((PIMAGE_EXPORT_DIRECTORY )uiExportDir)->NumberOfNames;
     dwCounter := PImageExportDirectory(uiExportDir).NumberOfNames;

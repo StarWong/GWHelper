@@ -8,270 +8,264 @@
   resources were bound to the produced executable.
 */
 
-#define Consts_STaskDlgRadioButtonCaption 65264
-#define Consts_SInvalidTaskDlgButtonCaption 65265
-#define Consts_sAllFilter 65280
-#define Consts_SInsertLineError 65281
-#define Consts_SIconToClipboard 65282
-#define Consts_SCannotOpenClipboard 65283
-#define Consts_SInvalidMemoSize 65284
-#define Consts_SInvalidPrinterOp 65285
-#define Consts_SNoDefaultPrinter 65286
-#define Consts_SDuplicateMenus 65287
-#define Consts_SDockedCtlNeedsName 65288
-#define Consts_SDockTreeRemoveError 65289
-#define Consts_SDockZoneNotFound 65290
-#define Consts_SDockZoneHasNoCtl 65291
-#define Consts_SDockZoneVersionConflict 65292
-#define Consts_SWindowsVistaRequired 65293
-#define Consts_SXPThemesRequired 65294
-#define Consts_STaskDlgButtonCaption 65295
-#define Consts_SmkcEnter 65296
-#define Consts_SmkcSpace 65297
-#define Consts_SmkcPgUp 65298
-#define Consts_SmkcPgDn 65299
-#define Consts_SmkcEnd 65300
-#define Consts_SmkcHome 65301
-#define Consts_SmkcLeft 65302
-#define Consts_SmkcUp 65303
-#define Consts_SmkcRight 65304
-#define Consts_SmkcDown 65305
-#define Consts_SmkcIns 65306
-#define Consts_SmkcDel 65307
-#define Consts_SmkcShift 65308
-#define Consts_SmkcCtrl 65309
-#define Consts_SmkcAlt 65310
-#define Consts_SOutOfRange 65311
-#define Consts_SMsgDlgConfirm 65312
-#define Consts_SMsgDlgYes 65313
-#define Consts_SMsgDlgNo 65314
-#define Consts_SMsgDlgOK 65315
-#define Consts_SMsgDlgCancel 65316
-#define Consts_SMsgDlgHelp 65317
-#define Consts_SMsgDlgAbort 65318
-#define Consts_SMsgDlgRetry 65319
-#define Consts_SMsgDlgIgnore 65320
-#define Consts_SMsgDlgAll 65321
-#define Consts_SMsgDlgNoToAll 65322
-#define Consts_SMsgDlgYesToAll 65323
-#define Consts_SMsgDlgClose 65324
-#define Consts_SmkcBkSp 65325
-#define Consts_SmkcTab 65326
-#define Consts_SmkcEsc 65327
-#define Consts_SPrinterIndexError 65328
-#define Consts_SInvalidPrinter 65329
-#define Consts_SDeviceOnPort 65330
-#define Consts_SGroupIndexTooLow 65331
-#define Consts_SNoMDIForm 65332
-#define Consts_SImageCanvasNeedsBitmap 65333
-#define Consts_SControlParentSetToSelf 65334
-#define Consts_SCannotDragForm 65335
-#define Consts_SVMetafiles 65336
-#define Consts_SVEnhMetafiles 65337
-#define Consts_SVIcons 65338
-#define Consts_SVBitmaps 65339
-#define Consts_SVTIFFImages 65340
-#define Consts_SMsgDlgWarning 65341
-#define Consts_SMsgDlgError 65342
-#define Consts_SMsgDlgInformation 65343
-#define Consts_SImageWriteFail 65344
-#define Consts_SWindowDCError 65345
-#define Consts_SWindowClass 65346
-#define Consts_SCannotFocus 65347
-#define Consts_SParentRequired 65348
-#define Consts_SParentGivenNotAParent 65349
-#define Consts_SMDIChildNotVisible 65350
-#define Consts_SVisibleChanged 65351
-#define Consts_SCannotShowModal 65352
-#define Consts_SPropertyOutOfRange 65353
-#define Consts_SMenuIndexError 65354
-#define Consts_SMenuReinserted 65355
-#define Consts_SMenuNotFound 65356
-#define Consts_SNoTimers 65357
-#define Consts_SNotPrinting 65358
-#define Consts_SPrinting 65359
-#define Consts_SInvalidBitmap 65360
-#define Consts_SInvalidIcon 65361
-#define Consts_SInvalidMetafile 65362
-#define Consts_SInvalidPixelFormat 65363
-#define Consts_SInvalidImage 65364
-#define Consts_SChangeIconSize 65365
-#define Consts_SChangeWicSize 65366
-#define Consts_SUnknownExtension 65367
-#define Consts_SUnknownClipboardFormat 65368
-#define Consts_SOutOfResources 65369
-#define Consts_SNoCanvasHandle 65370
-#define Consts_SInvalidImageSize 65371
-#define Consts_SInvalidImageList 65372
-#define Consts_SReplaceImage 65373
-#define Consts_SImageIndexError 65374
-#define Consts_SImageReadFail 65375
-#define RTLConsts_SParamIsNegative 65376
-#define RTLConsts_SInputBufferExceed 65377
-#define RTLConsts_SFileNotFound 65378
-#define RTLConsts_hNoFilterViewer 65379
-#define RTLConsts_sInvalidTimeoutValue 65380
-#define RTLConsts_SInvalidInteger 65381
-#define RTLConsts_STimeEncodeError 65382
-#define RTLConsts_SNoContext 65383
-#define RTLConsts_SNoContextFound 65384
-#define RTLConsts_SNoIndex 65385
-#define RTLConsts_SNoSearch 65386
-#define RTLConsts_SNoTableOfContents 65387
-#define RTLConsts_SNoTopics 65388
-#define RTLConsts_SNothingFound 65389
-#define RTLConsts_SArgumentOutOfRange 65390
-#define RTLConsts_SGenericDuplicateItem 65391
-#define RTLConsts_SReadError 65392
-#define RTLConsts_SReadOnlyProperty 65393
-#define RTLConsts_SRegCreateFailed 65394
-#define RTLConsts_SRegGetDataFailed 65395
-#define RTLConsts_SRegSetDataFailed 65396
-#define RTLConsts_SResNotFound 65397
-#define RTLConsts_SSeekNotImplemented 65398
-#define RTLConsts_SSortedListError 65399
-#define RTLConsts_SUnknownGroup 65400
-#define RTLConsts_SUnknownProperty 65401
-#define RTLConsts_SWriteError 65402
-#define RTLConsts_SThreadCreateError 65403
-#define RTLConsts_SThreadError 65404
-#define RTLConsts_SThreadExternalTerminate 65405
-#define RTLConsts_SThreadExternalWait 65406
-#define RTLConsts_SThreadStartError 65407
-#define RTLConsts_SDuplicateString 65408
-#define RTLConsts_SFCreateErrorEx 65409
-#define RTLConsts_SFOpenErrorEx 65410
-#define RTLConsts_SInvalidFileName 65411
-#define RTLConsts_SInvalidImage 65412
-#define RTLConsts_SInvalidName 65413
-#define RTLConsts_SInvalidProperty 65414
-#define RTLConsts_SInvalidPropertyPath 65415
-#define RTLConsts_SInvalidPropertyValue 65416
-#define RTLConsts_SInvalidRegType 65417
-#define RTLConsts_SListCapacityError 65418
-#define RTLConsts_SListCountError 65419
-#define RTLConsts_SListIndexError 65420
-#define RTLConsts_SMemoryStreamError 65421
-#define RTLConsts_SNoComSupport 65422
-#define RTLConsts_SPropertyException 65423
-#define SysConst_SInvalidSourceArray 65424
-#define SysConst_SInvalidDestinationArray 65425
-#define SysConst_SCharIndexOutOfBounds 65426
-#define SysConst_SByteIndexOutOfBounds 65427
-#define SysConst_SInvalidCharCount 65428
-#define SysConst_SInvalidDestinationIndex 65429
-#define SysConst_SInvalidCodePage 65430
-#define RTLConsts_SAncestorNotFound 65431
-#define RTLConsts_SAssignError 65432
-#define RTLConsts_SBitsIndexError 65433
-#define RTLConsts_SCantWriteResourceStreamError 65434
-#define RTLConsts_SCheckSynchronizeError 65435
-#define RTLConsts_SClassNotFound 65436
-#define RTLConsts_SDuplicateClass 65437
-#define RTLConsts_SDuplicateItem 65438
-#define RTLConsts_SDuplicateName 65439
-#define SysConst_SLongMonthNameNov 65440
-#define SysConst_SLongMonthNameDec 65441
-#define SysConst_SShortDayNameSun 65442
-#define SysConst_SShortDayNameMon 65443
-#define SysConst_SShortDayNameTue 65444
-#define SysConst_SShortDayNameWed 65445
-#define SysConst_SShortDayNameThu 65446
-#define SysConst_SShortDayNameFri 65447
-#define SysConst_SShortDayNameSat 65448
-#define SysConst_SLongDayNameSun 65449
-#define SysConst_SLongDayNameMon 65450
-#define SysConst_SLongDayNameTue 65451
-#define SysConst_SLongDayNameWed 65452
-#define SysConst_SLongDayNameThu 65453
-#define SysConst_SLongDayNameFri 65454
-#define SysConst_SLongDayNameSat 65455
-#define SysConst_SShortMonthNameJul 65456
-#define SysConst_SShortMonthNameAug 65457
-#define SysConst_SShortMonthNameSep 65458
-#define SysConst_SShortMonthNameOct 65459
-#define SysConst_SShortMonthNameNov 65460
-#define SysConst_SShortMonthNameDec 65461
-#define SysConst_SLongMonthNameJan 65462
-#define SysConst_SLongMonthNameFeb 65463
-#define SysConst_SLongMonthNameMar 65464
-#define SysConst_SLongMonthNameApr 65465
-#define SysConst_SLongMonthNameMay 65466
-#define SysConst_SLongMonthNameJun 65467
-#define SysConst_SLongMonthNameJul 65468
-#define SysConst_SLongMonthNameAug 65469
-#define SysConst_SLongMonthNameSep 65470
-#define SysConst_SLongMonthNameOct 65471
-#define SysConst_SAssertionFailed 65472
-#define SysConst_SIntfCastError 65473
-#define SysConst_SSafecallException 65474
-#define SysConst_SMonitorLockException 65475
-#define SysConst_SNoMonitorSupportException 65476
-#define SysConst_SAssertError 65477
-#define SysConst_SAbstractError 65478
-#define SysConst_SModuleAccessViolation 65479
-#define SysConst_SOSError 65480
-#define SysConst_SUnkOSError 65481
-#define SysConst_SShortMonthNameJan 65482
-#define SysConst_SShortMonthNameFeb 65483
-#define SysConst_SShortMonthNameMar 65484
-#define SysConst_SShortMonthNameApr 65485
-#define SysConst_SShortMonthNameMay 65486
-#define SysConst_SShortMonthNameJun 65487
-#define SysConst_SInvalidVarCast 65488
-#define SysConst_SInvalidVarOp 65489
-#define SysConst_SInvalidVarNullOp 65490
-#define SysConst_SInvalidVarOpWithHResultWithPrefix 65491
-#define SysConst_SVarTypeOutOfRangeWithPrefix 65492
-#define SysConst_SVarTypeAlreadyUsedWithPrefix 65493
-#define SysConst_SVarTypeNotUsableWithPrefix 65494
-#define SysConst_SVarTypeTooManyCustom 65495
-#define SysConst_SVarTypeCouldNotConvert 65496
-#define SysConst_SVarTypeConvertOverflow 65497
-#define SysConst_SVarOverflow 65498
-#define SysConst_SVarInvalid 65499
-#define SysConst_SVarBadType 65500
-#define SysConst_SVarNotImplemented 65501
-#define SysConst_SVarUnexpected 65502
-#define SysConst_SExternalException 65503
-#define SysConst_SInvalidCast 65504
-#define SysConst_SAccessViolationArg3 65505
-#define SysConst_SAccessViolationNoArg 65506
-#define SysConst_SStackOverflow 65507
-#define SysConst_SControlC 65508
-#define SysConst_SPrivilege 65509
-#define SysConst_SException 65510
-#define SysConst_SExceptTitle 65511
-#define SysConst_SInvalidFormat 65512
-#define SysConst_SArgumentMissing 65513
-#define SysConst_SDispatchError 65514
-#define SysConst_SReadAccess 65515
-#define SysConst_SWriteAccess 65516
-#define SysConst_SVarArrayCreate 65517
-#define SysConst_SVarArrayBounds 65518
-#define SysConst_SVarArrayLocked 65519
-#define SysConst_SDateEncodeError 65520
-#define SysConst_SOutOfMemory 65521
-#define SysConst_SInOutError 65522
-#define SysConst_STooManyOpenFiles 65523
-#define SysConst_SAccessDenied 65524
-#define SysConst_SEndOfFile 65525
-#define SysConst_SDiskFull 65526
-#define SysConst_SInvalidInput 65527
-#define SysConst_SDivByZero 65528
-#define SysConst_SRangeError 65529
-#define SysConst_SIntOverflow 65530
-#define SysConst_SInvalidOp 65531
-#define SysConst_SZeroDivide 65532
-#define SysConst_SOverflow 65533
-#define SysConst_SUnderflow 65534
-#define SysConst_SInvalidPointer 65535
+#define Consts_SIconToClipboard 65280
+#define Consts_SCannotOpenClipboard 65281
+#define Consts_SInvalidMemoSize 65282
+#define Consts_SInvalidPrinterOp 65283
+#define Consts_SNoDefaultPrinter 65284
+#define Consts_SDuplicateMenus 65285
+#define Consts_SDockedCtlNeedsName 65286
+#define Consts_SDockTreeRemoveError 65287
+#define Consts_SDockZoneNotFound 65288
+#define Consts_SDockZoneHasNoCtl 65289
+#define Consts_SDockZoneVersionConflict 65290
+#define Consts_SWindowsVistaRequired 65291
+#define Consts_SXPThemesRequired 65292
+#define Consts_STaskDlgButtonCaption 65293
+#define Consts_STaskDlgRadioButtonCaption 65294
+#define Consts_SInvalidTaskDlgButtonCaption 65295
+#define Consts_SmkcPgUp 65296
+#define Consts_SmkcPgDn 65297
+#define Consts_SmkcEnd 65298
+#define Consts_SmkcHome 65299
+#define Consts_SmkcLeft 65300
+#define Consts_SmkcUp 65301
+#define Consts_SmkcRight 65302
+#define Consts_SmkcDown 65303
+#define Consts_SmkcIns 65304
+#define Consts_SmkcDel 65305
+#define Consts_SmkcShift 65306
+#define Consts_SmkcCtrl 65307
+#define Consts_SmkcAlt 65308
+#define Consts_SOutOfRange 65309
+#define Consts_sAllFilter 65310
+#define Consts_SInsertLineError 65311
+#define Consts_SMsgDlgNo 65312
+#define Consts_SMsgDlgOK 65313
+#define Consts_SMsgDlgCancel 65314
+#define Consts_SMsgDlgHelp 65315
+#define Consts_SMsgDlgAbort 65316
+#define Consts_SMsgDlgRetry 65317
+#define Consts_SMsgDlgIgnore 65318
+#define Consts_SMsgDlgAll 65319
+#define Consts_SMsgDlgNoToAll 65320
+#define Consts_SMsgDlgYesToAll 65321
+#define Consts_SMsgDlgClose 65322
+#define Consts_SmkcBkSp 65323
+#define Consts_SmkcTab 65324
+#define Consts_SmkcEsc 65325
+#define Consts_SmkcEnter 65326
+#define Consts_SmkcSpace 65327
+#define Consts_SDeviceOnPort 65328
+#define Consts_SGroupIndexTooLow 65329
+#define Consts_SNoMDIForm 65330
+#define Consts_SImageCanvasNeedsBitmap 65331
+#define Consts_SControlParentSetToSelf 65332
+#define Consts_SCannotDragForm 65333
+#define Consts_SVMetafiles 65334
+#define Consts_SVEnhMetafiles 65335
+#define Consts_SVIcons 65336
+#define Consts_SVBitmaps 65337
+#define Consts_SVTIFFImages 65338
+#define Consts_SMsgDlgWarning 65339
+#define Consts_SMsgDlgError 65340
+#define Consts_SMsgDlgInformation 65341
+#define Consts_SMsgDlgConfirm 65342
+#define Consts_SMsgDlgYes 65343
+#define Consts_SWindowClass 65344
+#define Consts_SCannotFocus 65345
+#define Consts_SParentRequired 65346
+#define Consts_SParentGivenNotAParent 65347
+#define Consts_SMDIChildNotVisible 65348
+#define Consts_SVisibleChanged 65349
+#define Consts_SCannotShowModal 65350
+#define Consts_SPropertyOutOfRange 65351
+#define Consts_SMenuIndexError 65352
+#define Consts_SMenuReinserted 65353
+#define Consts_SMenuNotFound 65354
+#define Consts_SNoTimers 65355
+#define Consts_SNotPrinting 65356
+#define Consts_SPrinting 65357
+#define Consts_SPrinterIndexError 65358
+#define Consts_SInvalidPrinter 65359
+#define Consts_SInvalidMetafile 65360
+#define Consts_SInvalidPixelFormat 65361
+#define Consts_SInvalidImage 65362
+#define Consts_SChangeIconSize 65363
+#define Consts_SChangeWicSize 65364
+#define Consts_SUnknownExtension 65365
+#define Consts_SUnknownClipboardFormat 65366
+#define Consts_SOutOfResources 65367
+#define Consts_SNoCanvasHandle 65368
+#define Consts_SInvalidImageSize 65369
+#define Consts_SInvalidImageList 65370
+#define Consts_SReplaceImage 65371
+#define Consts_SImageIndexError 65372
+#define Consts_SImageReadFail 65373
+#define Consts_SImageWriteFail 65374
+#define Consts_SWindowDCError 65375
+#define RTLConsts_SInputBufferExceed 65376
+#define RTLConsts_SFileNotFound 65377
+#define RTLConsts_hNoFilterViewer 65378
+#define RTLConsts_sInvalidTimeoutValue 65379
+#define RTLConsts_SInvalidInteger 65380
+#define RTLConsts_SNoContext 65381
+#define RTLConsts_SNoContextFound 65382
+#define RTLConsts_SNoIndex 65383
+#define RTLConsts_SNoSearch 65384
+#define RTLConsts_SNoTableOfContents 65385
+#define RTLConsts_SNoTopics 65386
+#define RTLConsts_SNothingFound 65387
+#define RTLConsts_SArgumentOutOfRange 65388
+#define RTLConsts_SGenericDuplicateItem 65389
+#define Consts_SInvalidBitmap 65390
+#define Consts_SInvalidIcon 65391
+#define RTLConsts_SReadOnlyProperty 65392
+#define RTLConsts_SRegCreateFailed 65393
+#define RTLConsts_SRegGetDataFailed 65394
+#define RTLConsts_SRegSetDataFailed 65395
+#define RTLConsts_SResNotFound 65396
+#define RTLConsts_SSeekNotImplemented 65397
+#define RTLConsts_SSortedListError 65398
+#define RTLConsts_SUnknownGroup 65399
+#define RTLConsts_SUnknownProperty 65400
+#define RTLConsts_SWriteError 65401
+#define RTLConsts_SThreadCreateError 65402
+#define RTLConsts_SThreadError 65403
+#define RTLConsts_SThreadExternalTerminate 65404
+#define RTLConsts_SThreadExternalWait 65405
+#define RTLConsts_SThreadStartError 65406
+#define RTLConsts_SParamIsNegative 65407
+#define RTLConsts_SFCreateErrorEx 65408
+#define RTLConsts_SFOpenErrorEx 65409
+#define RTLConsts_SInvalidFileName 65410
+#define RTLConsts_SInvalidImage 65411
+#define RTLConsts_SInvalidName 65412
+#define RTLConsts_SInvalidProperty 65413
+#define RTLConsts_SInvalidPropertyPath 65414
+#define RTLConsts_SInvalidPropertyValue 65415
+#define RTLConsts_SInvalidRegType 65416
+#define RTLConsts_SListCapacityError 65417
+#define RTLConsts_SListCountError 65418
+#define RTLConsts_SListIndexError 65419
+#define RTLConsts_SMemoryStreamError 65420
+#define RTLConsts_SNoComSupport 65421
+#define RTLConsts_SPropertyException 65422
+#define RTLConsts_SReadError 65423
+#define SysConst_SInvalidDestinationArray 65424
+#define SysConst_SCharIndexOutOfBounds 65425
+#define SysConst_SByteIndexOutOfBounds 65426
+#define SysConst_SInvalidCharCount 65427
+#define SysConst_SInvalidDestinationIndex 65428
+#define SysConst_SInvalidCodePage 65429
+#define RTLConsts_SAncestorNotFound 65430
+#define RTLConsts_SAssignError 65431
+#define RTLConsts_SBitsIndexError 65432
+#define RTLConsts_SCantWriteResourceStreamError 65433
+#define RTLConsts_SCheckSynchronizeError 65434
+#define RTLConsts_SClassNotFound 65435
+#define RTLConsts_SDuplicateClass 65436
+#define RTLConsts_SDuplicateItem 65437
+#define RTLConsts_SDuplicateName 65438
+#define RTLConsts_SDuplicateString 65439
+#define SysConst_SLongMonthNameDec 65440
+#define SysConst_SShortDayNameSun 65441
+#define SysConst_SShortDayNameMon 65442
+#define SysConst_SShortDayNameTue 65443
+#define SysConst_SShortDayNameWed 65444
+#define SysConst_SShortDayNameThu 65445
+#define SysConst_SShortDayNameFri 65446
+#define SysConst_SShortDayNameSat 65447
+#define SysConst_SLongDayNameSun 65448
+#define SysConst_SLongDayNameMon 65449
+#define SysConst_SLongDayNameTue 65450
+#define SysConst_SLongDayNameWed 65451
+#define SysConst_SLongDayNameThu 65452
+#define SysConst_SLongDayNameFri 65453
+#define SysConst_SLongDayNameSat 65454
+#define SysConst_SInvalidSourceArray 65455
+#define SysConst_SShortMonthNameAug 65456
+#define SysConst_SShortMonthNameSep 65457
+#define SysConst_SShortMonthNameOct 65458
+#define SysConst_SShortMonthNameNov 65459
+#define SysConst_SShortMonthNameDec 65460
+#define SysConst_SLongMonthNameJan 65461
+#define SysConst_SLongMonthNameFeb 65462
+#define SysConst_SLongMonthNameMar 65463
+#define SysConst_SLongMonthNameApr 65464
+#define SysConst_SLongMonthNameMay 65465
+#define SysConst_SLongMonthNameJun 65466
+#define SysConst_SLongMonthNameJul 65467
+#define SysConst_SLongMonthNameAug 65468
+#define SysConst_SLongMonthNameSep 65469
+#define SysConst_SLongMonthNameOct 65470
+#define SysConst_SLongMonthNameNov 65471
+#define SysConst_SIntfCastError 65472
+#define SysConst_SSafecallException 65473
+#define SysConst_SMonitorLockException 65474
+#define SysConst_SNoMonitorSupportException 65475
+#define SysConst_SAssertError 65476
+#define SysConst_SAbstractError 65477
+#define SysConst_SModuleAccessViolation 65478
+#define SysConst_SOSError 65479
+#define SysConst_SUnkOSError 65480
+#define SysConst_SShortMonthNameJan 65481
+#define SysConst_SShortMonthNameFeb 65482
+#define SysConst_SShortMonthNameMar 65483
+#define SysConst_SShortMonthNameApr 65484
+#define SysConst_SShortMonthNameMay 65485
+#define SysConst_SShortMonthNameJun 65486
+#define SysConst_SShortMonthNameJul 65487
+#define SysConst_SInvalidVarOp 65488
+#define SysConst_SInvalidVarNullOp 65489
+#define SysConst_SInvalidVarOpWithHResultWithPrefix 65490
+#define SysConst_SVarTypeOutOfRangeWithPrefix 65491
+#define SysConst_SVarTypeAlreadyUsedWithPrefix 65492
+#define SysConst_SVarTypeNotUsableWithPrefix 65493
+#define SysConst_SVarTypeTooManyCustom 65494
+#define SysConst_SVarTypeCouldNotConvert 65495
+#define SysConst_SVarTypeConvertOverflow 65496
+#define SysConst_SVarOverflow 65497
+#define SysConst_SVarInvalid 65498
+#define SysConst_SVarBadType 65499
+#define SysConst_SVarNotImplemented 65500
+#define SysConst_SVarUnexpected 65501
+#define SysConst_SExternalException 65502
+#define SysConst_SAssertionFailed 65503
+#define SysConst_SAccessViolationArg3 65504
+#define SysConst_SAccessViolationNoArg 65505
+#define SysConst_SStackOverflow 65506
+#define SysConst_SControlC 65507
+#define SysConst_SPrivilege 65508
+#define SysConst_SException 65509
+#define SysConst_SExceptTitle 65510
+#define SysConst_SInvalidFormat 65511
+#define SysConst_SArgumentMissing 65512
+#define SysConst_SDispatchError 65513
+#define SysConst_SReadAccess 65514
+#define SysConst_SWriteAccess 65515
+#define SysConst_SVarArrayCreate 65516
+#define SysConst_SVarArrayBounds 65517
+#define SysConst_SVarArrayLocked 65518
+#define SysConst_SInvalidVarCast 65519
+#define SysConst_SOutOfMemory 65520
+#define SysConst_SInOutError 65521
+#define SysConst_STooManyOpenFiles 65522
+#define SysConst_SAccessDenied 65523
+#define SysConst_SEndOfFile 65524
+#define SysConst_SDiskFull 65525
+#define SysConst_SInvalidInput 65526
+#define SysConst_SDivByZero 65527
+#define SysConst_SRangeError 65528
+#define SysConst_SIntOverflow 65529
+#define SysConst_SInvalidOp 65530
+#define SysConst_SZeroDivide 65531
+#define SysConst_SOverflow 65532
+#define SysConst_SUnderflow 65533
+#define SysConst_SInvalidPointer 65534
+#define SysConst_SInvalidCast 65535
 STRINGTABLE
 BEGIN
-	Consts_STaskDlgRadioButtonCaption,	"RadioButton%d"
-	Consts_SInvalidTaskDlgButtonCaption,	"Caption cannot be empty"
-	Consts_sAllFilter,	"All"
-	Consts_SInsertLineError,	"Unable to insert a line"
 	Consts_SIconToClipboard,	"Clipboard does not support Icons"
 	Consts_SCannotOpenClipboard,	"Cannot open clipboard: %s"
 	Consts_SInvalidMemoSize,	"Text exceeds memo capacity"
@@ -286,8 +280,8 @@ BEGIN
 	Consts_SWindowsVistaRequired,	"%s requires Windows Vista or later"
 	Consts_SXPThemesRequired,	"%s requires themes to be enabled"
 	Consts_STaskDlgButtonCaption,	"Button%d"
-	Consts_SmkcEnter,	"Enter"
-	Consts_SmkcSpace,	"Space"
+	Consts_STaskDlgRadioButtonCaption,	"RadioButton%d"
+	Consts_SInvalidTaskDlgButtonCaption,	"Caption cannot be empty"
 	Consts_SmkcPgUp,	"PgUp"
 	Consts_SmkcPgDn,	"PgDn"
 	Consts_SmkcEnd,	"End"
@@ -302,8 +296,8 @@ BEGIN
 	Consts_SmkcCtrl,	"Ctrl+"
 	Consts_SmkcAlt,	"Alt+"
 	Consts_SOutOfRange,	"Value must be between %d and %d"
-	Consts_SMsgDlgConfirm,	"Confirm"
-	Consts_SMsgDlgYes,	"&Yes"
+	Consts_sAllFilter,	"All"
+	Consts_SInsertLineError,	"Unable to insert a line"
 	Consts_SMsgDlgNo,	"&No"
 	Consts_SMsgDlgOK,	"OK"
 	Consts_SMsgDlgCancel,	"Cancel"
@@ -318,8 +312,8 @@ BEGIN
 	Consts_SmkcBkSp,	"BkSp"
 	Consts_SmkcTab,	"Tab"
 	Consts_SmkcEsc,	"Esc"
-	Consts_SPrinterIndexError,	"Printer index out of range"
-	Consts_SInvalidPrinter,	"Printer selected is not valid"
+	Consts_SmkcEnter,	"Enter"
+	Consts_SmkcSpace,	"Space"
 	Consts_SDeviceOnPort,	"%s on %s"
 	Consts_SGroupIndexTooLow,	"GroupIndex cannot be less than a previous menu item's GroupIndex"
 	Consts_SNoMDIForm,	"Cannot create form. No MDI forms are currently active"
@@ -334,8 +328,8 @@ BEGIN
 	Consts_SMsgDlgWarning,	"Warning"
 	Consts_SMsgDlgError,	"Error"
 	Consts_SMsgDlgInformation,	"Information"
-	Consts_SImageWriteFail,	"Failed to write ImageList data to stream"
-	Consts_SWindowDCError,	"Error creating window device context"
+	Consts_SMsgDlgConfirm,	"Confirm"
+	Consts_SMsgDlgYes,	"&Yes"
 	Consts_SWindowClass,	"Error creating window class"
 	Consts_SCannotFocus,	"Cannot focus a disabled or invisible window"
 	Consts_SParentRequired,	"Control '%s' has no parent window"
@@ -350,8 +344,8 @@ BEGIN
 	Consts_SNoTimers,	"Not enough timers available"
 	Consts_SNotPrinting,	"Printer is not currently printing"
 	Consts_SPrinting,	"Printing in progress"
-	Consts_SInvalidBitmap,	"Bitmap image is not valid"
-	Consts_SInvalidIcon,	"Icon image is not valid"
+	Consts_SPrinterIndexError,	"Printer index out of range"
+	Consts_SInvalidPrinter,	"Printer selected is not valid"
 	Consts_SInvalidMetafile,	"Metafile is not valid"
 	Consts_SInvalidPixelFormat,	"Invalid pixel format"
 	Consts_SInvalidImage,	"Invalid image"
@@ -366,13 +360,13 @@ BEGIN
 	Consts_SReplaceImage,	"Unable to Replace Image"
 	Consts_SImageIndexError,	"Invalid ImageList Index"
 	Consts_SImageReadFail,	"Failed to read ImageList data from stream"
-	RTLConsts_SParamIsNegative,	"Parameter %s cannot be a negative value"
+	Consts_SImageWriteFail,	"Failed to write ImageList data to stream"
+	Consts_SWindowDCError,	"Error creating window device context"
 	RTLConsts_SInputBufferExceed,	"Input buffer exceeded for %s = %d, %s = %d"
 	RTLConsts_SFileNotFound,	"The specified file was not found"
 	RTLConsts_hNoFilterViewer,	"No help viewer that supports filters"
 	RTLConsts_sInvalidTimeoutValue,	"Invalid Timeout value: %s"
 	RTLConsts_SInvalidInteger,	"''%s'' is not a valid integer value"
-	RTLConsts_STimeEncodeError,	"Invalid argument to time encode"
 	RTLConsts_SNoContext,	"No context-sensitive help installed"
 	RTLConsts_SNoContextFound,	"No help found for context"
 	RTLConsts_SNoIndex,	"Unable to open Index"
@@ -382,7 +376,8 @@ BEGIN
 	RTLConsts_SNothingFound,	"No help found for %s"
 	RTLConsts_SArgumentOutOfRange,	"Argument out of range"
 	RTLConsts_SGenericDuplicateItem,	"Duplicates not allowed"
-	RTLConsts_SReadError,	"Stream read error"
+	Consts_SInvalidBitmap,	"Bitmap image is not valid"
+	Consts_SInvalidIcon,	"Icon image is not valid"
 	RTLConsts_SReadOnlyProperty,	"Property is read-only"
 	RTLConsts_SRegCreateFailed,	"Failed to create key %s"
 	RTLConsts_SRegGetDataFailed,	"Failed to get data for '%s'"
@@ -398,7 +393,7 @@ BEGIN
 	RTLConsts_SThreadExternalTerminate,	"Cannot terminate an externally created thread"
 	RTLConsts_SThreadExternalWait,	"Cannot wait for an externally created thread"
 	RTLConsts_SThreadStartError,	"Cannot call Start on a running or suspended thread"
-	RTLConsts_SDuplicateString,	"String list does not allow duplicates"
+	RTLConsts_SParamIsNegative,	"Parameter %s cannot be a negative value"
 	RTLConsts_SFCreateErrorEx,	"Cannot create file \"%s\". %s"
 	RTLConsts_SFOpenErrorEx,	"Cannot open file \"%s\". %s"
 	RTLConsts_SInvalidFileName,	"Invalid file name - %s"
@@ -414,7 +409,7 @@ BEGIN
 	RTLConsts_SMemoryStreamError,	"Out of memory while expanding memory stream"
 	RTLConsts_SNoComSupport,	"%s has not been registered as a COM class"
 	RTLConsts_SPropertyException,	"Error reading %s%s%s: %s"
-	SysConst_SInvalidSourceArray,	"Invalid source array"
+	RTLConsts_SReadError,	"Stream read error"
 	SysConst_SInvalidDestinationArray,	"Invalid destination array"
 	SysConst_SCharIndexOutOfBounds,	"Character index out of bounds (%d)"
 	SysConst_SByteIndexOutOfBounds,	"Start index out of bounds (%d)"
@@ -430,7 +425,7 @@ BEGIN
 	RTLConsts_SDuplicateClass,	"A class named %s already exists"
 	RTLConsts_SDuplicateItem,	"List does not allow duplicates ($0%x)"
 	RTLConsts_SDuplicateName,	"A component named %s already exists"
-	SysConst_SLongMonthNameNov,	"November"
+	RTLConsts_SDuplicateString,	"String list does not allow duplicates"
 	SysConst_SLongMonthNameDec,	"December"
 	SysConst_SShortDayNameSun,	"Sun"
 	SysConst_SShortDayNameMon,	"Mon"
@@ -446,7 +441,7 @@ BEGIN
 	SysConst_SLongDayNameThu,	"Thursday"
 	SysConst_SLongDayNameFri,	"Friday"
 	SysConst_SLongDayNameSat,	"Saturday"
-	SysConst_SShortMonthNameJul,	"Jul"
+	SysConst_SInvalidSourceArray,	"Invalid source array"
 	SysConst_SShortMonthNameAug,	"Aug"
 	SysConst_SShortMonthNameSep,	"Sep"
 	SysConst_SShortMonthNameOct,	"Oct"
@@ -462,7 +457,7 @@ BEGIN
 	SysConst_SLongMonthNameAug,	"August"
 	SysConst_SLongMonthNameSep,	"September"
 	SysConst_SLongMonthNameOct,	"October"
-	SysConst_SAssertionFailed,	"Assertion failed"
+	SysConst_SLongMonthNameNov,	"November"
 	SysConst_SIntfCastError,	"Interface not supported"
 	SysConst_SSafecallException,	"Exception in safecall method"
 	SysConst_SMonitorLockException,	"Object lock not owned"
@@ -478,7 +473,7 @@ BEGIN
 	SysConst_SShortMonthNameApr,	"Apr"
 	SysConst_SShortMonthNameMay,	"May"
 	SysConst_SShortMonthNameJun,	"Jun"
-	SysConst_SInvalidVarCast,	"Invalid variant type conversion"
+	SysConst_SShortMonthNameJul,	"Jul"
 	SysConst_SInvalidVarOp,	"Invalid variant operation"
 	SysConst_SInvalidVarNullOp,	"Invalid NULL variant operation"
 	SysConst_SInvalidVarOpWithHResultWithPrefix,	"Invalid variant operation (%s%.8x)\n%s"
@@ -494,7 +489,7 @@ BEGIN
 	SysConst_SVarNotImplemented,	"Operation not supported"
 	SysConst_SVarUnexpected,	"Unexpected variant error"
 	SysConst_SExternalException,	"External exception %x"
-	SysConst_SInvalidCast,	"Invalid class typecast"
+	SysConst_SAssertionFailed,	"Assertion failed"
 	SysConst_SAccessViolationArg3,	"Access violation at address %p. %s of address %p"
 	SysConst_SAccessViolationNoArg,	"Access violation"
 	SysConst_SStackOverflow,	"Stack overflow"
@@ -510,7 +505,7 @@ BEGIN
 	SysConst_SVarArrayCreate,	"Error creating variant or safe array"
 	SysConst_SVarArrayBounds,	"Variant or safe array index out of bounds"
 	SysConst_SVarArrayLocked,	"Variant or safe array is locked"
-	SysConst_SDateEncodeError,	"Invalid argument to date encode"
+	SysConst_SInvalidVarCast,	"Invalid variant type conversion"
 	SysConst_SOutOfMemory,	"Out of memory"
 	SysConst_SInOutError,	"I/O error %d"
 	SysConst_STooManyOpenFiles,	"Too many open files"
@@ -526,11 +521,13 @@ BEGIN
 	SysConst_SOverflow,	"Floating point overflow"
 	SysConst_SUnderflow,	"Floating point underflow"
 	SysConst_SInvalidPointer,	"Invalid pointer operation"
+	SysConst_SInvalidCast,	"Invalid class typecast"
 END
 
 /* c:\program files (x86)\embarcadero\rad studio\7.0\lib\Character.res */
 /* c:\program files (x86)\embarcadero\rad studio\7.0\lib\controls.res */
 /* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\GWHelper\DllServer.RES */
+/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\GWHelper\DllClient.RES */
 /* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\GWHelper\Main.dfm */
 /* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\GWHelper\Reflective.res */
 /* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\GWHelper\Reflective.drf */

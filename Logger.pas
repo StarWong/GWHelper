@@ -1,18 +1,23 @@
 unit Logger;
 
-interface
 
+interface
+{$IFDEF SaveLog}
 procedure SaveLog(const Str: string;Date_lOG:Boolean=False);overload
 procedure SaveLog(const Data: Cardinal;Date_lOG:Boolean=False);overload
 procedure SaveLog(const Key: string;const Value: Cardinal;Date_lOG:Boolean=False);overload
 procedure SaveLog(const Key: string;const Value: Cardinal;BaseData:Cardinal = 0;Date_lOG:Boolean=False);overload
 procedure SetLogger(const DirectoryPath_:string;const logFileName_:string;const RetSetLogFile_:Boolean);
+{$ENDIF}
+{$IFDEF  Log}
 procedure Log(const msg:string;const Args: array of const);overload;
 procedure Log(const msg:string);overload;
 procedure Log(pAddr:PByte;Len:Cardinal);overload;
+{$ENDIF}
 implementation
 uses
 Windows,SysUtils;
+{$IFDEF  Log}
 type
   CONSOLE_FONT_INFOEX = record
     cbSize      : ULONG;
@@ -29,10 +34,15 @@ var
 HConsole:Cardinal;
 FontInfo:CONSOLE_FONT_INFOEX;
 ScreenInfo:_CONSOLE_SCREEN_BUFFER_INFO;
+{$ENDIF}
+{$IFDEF SaveLog}
+var
 DirectoryPath:string = '';
 logFileName:string = 'Logger.log';
 RetSetLogFile:Boolean = True;
+{$ENDIF}
 {$REGION 'Debug & Logs'}
+{$IFDEF SaveLog}
 procedure AppendTxt(const filePath, Str: string); // 主进程函数
 var
   F: Textfile;
@@ -83,7 +93,8 @@ begin
     logFileName:=logFileName_;
     RetSetLogFile:=RetSetLogFile_;
 end;
-
+{$ENDIF}
+{$IFDEF Log}
 function SetCurrentConsoleFontEx(hConsoleOutput: Cardinal; bMaximumWindow: BOOL; var CONSOLE_FONT_INFOEX): BOOL;
    stdcall; external 'kernel32.dll' name 'SetCurrentConsoleFontEx';
 function GetCurrentConsoleFontEx(hConsoleOutput:Cardinal;bMaximumWindow:BOOL;var ConsoleCurrentFontEx):BOOL;
@@ -666,11 +677,12 @@ begin
 
 end;
 
-
+{$ENDIF}
 
 {$ENDREGION}
 
 initialization
+{$IFDEF SaveLog}
 DirectoryPath := ExtractFilePath(paramstr(0));
 if  not fileExists(DirectoryPath + logFileName) then
     NewTxt(DirectoryPath + logFileName)
@@ -682,7 +694,8 @@ if  not fileExists(DirectoryPath + logFileName) then
         NewTxt(DirectoryPath + logFileName);
       end;
     end;
-
+{$ENDIF}
+{$IFDEF Log}
 AllocConsole;
 SetConsoleTitle('Debug Console');
 //SetConsoleOutputCP(CP_UTF8);
@@ -701,11 +714,11 @@ HConsole:=GetStdHandle(STD_OUTPUT_HANDLE);
 //GetCurrentConsoleFontEx(HConsole,False,FontInfo);
 //MessageBox(0,PWideChar('x:' + IntToStr(FontInfo.dwFontSizeX)),PWideChar('y:' + IntToStr(FontInfo.dwFontSizeY)),0);
 //SetCurrentConsoleFontEx(HConsole,False,FontInfo);
-
+{$ENDIF}
 finalization
-
+{$IFDEF Log}
 if HConsole <> 0 then
 CloseHandle(HConsole);
 //FreeConsole;
-
+{$ENDIF}
 end.

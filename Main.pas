@@ -36,6 +36,7 @@ procedure TForm1.Button1Click(Sender: TObject);
 begin
   InjectDll(PAnsiChar('Guild wars'));
   Sleep(1000);
+  Exit;
  if  ConnectToServer('\RPC Control\MyCoolDummyAlpcPort') = 0 then
  begin
  Self.Button1.Enabled:=False;

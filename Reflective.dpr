@@ -1,6 +1,11 @@
 program Reflective;
 
 uses
+  madExcept,
+  madLinkDisAsm,
+  madListHardware,
+  madListProcesses,
+  madListModules,
   Forms,
   Main in 'Main.pas' {Form1},
   LoadLibraryR in 'LoadLibraryR.pas',
@@ -8,7 +13,10 @@ uses
   Inject in 'Inject.pas',
   Logger in 'Logger.pas',
   DllRes in 'DllRes.pas',
-  NTLib in 'NTLib.pas';
+  NTLib in 'NTLib.pas',
+  MemoryModule in 'MemoryModule.pas',
+  MemoryModuleHook in 'MemoryModuleHook.pas',
+  FuncHook in 'FuncHook.pas';
 
 {$R *.res}
 

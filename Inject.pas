@@ -124,7 +124,7 @@ begin
 
 
 
-   if not GetResStream then  raise Exception.Create('Failed to get the DLL file size');
+   //if not GetResStream then  raise Exception.Create('Failed to get the DLL file size');
 
 
    //if not EnableDebug(mDebugHwnd) then Exit;
@@ -152,10 +152,10 @@ begin
    //hProcess :=OpenProcess($1F0FFF, True, mHwnd);
    if (hProcess = 0) then
    raise Exception.Create('Failed to open the target process');
-   hModule:=LoadRemoteLibraryR(hProcess, Res.Memory, Res.Size, nil);
+   hModule:=LoadRemoteLibraryR(hProcess, ServerRes.Memory, ServerRes.Size, nil);
    if ( hModule = 0 ) then raise Exception.Create('Failed to inject the DLL');
    WaitForSingleObject(hModule, $FFFFFFFF);
-  FreeResStream;
+  //FreeResStream;
   if (hProcess <> 0) then CloseHandle( hProcess );
   if (mDebugHwnd <> 0) then CloseHandle(mDebugHwnd);
   if (hModule <> 0) then  CloseHandle(hModule);
